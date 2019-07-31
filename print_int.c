@@ -1,38 +1,44 @@
 #include "holberton.h"
 /**
- * fun_integer - function that prints an string
- * @char_list: arg to be print
- * Return: the lenght of the string
+ * print_d - Entry point
+ *@print: the integer to print
+ * Return: no return
  */
-int fun_integer(va_list char_list)
+int p_d(va_list print)
 {
-	long num = va_arg(char_list, int);
-	int len = 0;
+	int n = va_arg(print, int);
+	int num, last = n % 10, digit, exp = 1;
+	int  i = 1;
 
-	if (num < 0)
+	n = n / 10;
+	num = n;
+
+	if (last < 0)
 	{
 		_putchar('-');
 		num = -num;
-		len++;
+		n = -n;
+		last = -last;
+		i++;
 	}
-	len += print_integer(num);
-	return (len);
-}
-
-/**
- * print_integer - function that prints an string
- * @num: num to be print
- * Return: the lenght of the string in abs. value
- */
-
-int print_integer(long num)
-{
-	int len = 0;
-	if (num / 10)
+	if (num > 0)
 	{
-		len += print_integer(num / 10);
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
+		num = n;
+		while (exp > 0)
+		{
+			digit = num / exp;
+			_putchar(digit + '0');
+			num = num - (digit * exp);
+			exp = exp / 10;
+			i++;
+		}
 	}
-	_putchar((num % 10) + '0');
-	len++;
-	return (len);
+	_putchar(last + '0');
+
+	return (i);
 }

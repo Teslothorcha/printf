@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
+int p_d(va_list print);
 int _strlen(const char *s);
 int _printf(const char *format, ...);
 int _putchar(char c);
