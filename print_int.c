@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * print_d - Entry point
- *@print: the integer to print
+ * p_d - Entry point
+ *@print: pints numbers
  * Return: no return
  */
 int p_d(va_list print)
