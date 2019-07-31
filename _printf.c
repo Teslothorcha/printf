@@ -12,6 +12,8 @@ int _printf(const char *format, ...)
 	argument arr[] = {
 		{'c', cha_r},
 		{'s', strin_g},
+		{'d', p_d},
+		{'i', p_d},
 		{'\0', NULL},
 };
 	int c1, c2, w;
