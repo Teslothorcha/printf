@@ -15,7 +15,7 @@
 
 
 ## Authors 
-    ✒️
+     ✒️
 * [Juan David Marin](https://twitter.com/Teslothorcha)
 * [Julian David Gaitan](https://twitter.com/JulianDavidG07)
 
@@ -28,7 +28,7 @@ A custom made printf function built in C using only the write, malloc, free, va_
 
 
 ## Description 
-      📖
+       📖
       
 The custom printf function is called using \_printf() and will take in a format string.
 
@@ -61,7 +61,7 @@ For example, with my cloned ```printf``` repository, we are going to run our ```
 
 
 ## Files 
-  📄
+    📄
   
   
 | File                               | Description                                                                                            |
