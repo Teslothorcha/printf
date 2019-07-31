@@ -1,18 +1,16 @@
 <h1 align ="center"> Printf Project </h1><br>
 
-## Authors ✒️
-
-* [Juan David Marin](https://twitter.com/Teslothorcha)
-* [Julian David Gaitan](https://twitter.com/JulianDavidG07)
-
 ## Table of Contents 📦
 
 - [Introduction](#introduction)
-- [Files](#files)
 - [Description](#description)
+- [Installation](#installation)
+- [Test](#Test)
+- [Files](#files)
 - [Features](#features)
 - [Built With](#built-with)
 - [Acknowledgments](#acknowledgments)
+- [Authors](#authors)
 
 ## Introduction    📌
 
@@ -103,4 +101,11 @@ For example, with my cloned ```printf``` repository, we are going to run our ```
 * [Holberton School](https://www.holbertonschool.com/)
 * [C library function - printf()](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm)
 * [The C Programming Language](https://www.dipmat.univpm.it/~demeio/public/the_c_programming_language_2.pdf) by Brian Kernighan
+
+
+## Authors ✒️
+
+* [Juan David Marin](https://twitter.com/Teslothorcha)
+* [Julian David Gaitan](https://twitter.com/JulianDavidG07)
+
 
