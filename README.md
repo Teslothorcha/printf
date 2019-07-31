@@ -44,7 +44,7 @@ For example, with my cloned ```printf``` repository, we are going to run our ```
 
 ```man ./[FILE]``` taking into account the structure, for our case it would be ```man ./man_3_printf```
 
-![man_page](https://media.geeksforgeeks.org/wp-content/uploads/7-55.png
+![man_page](https://media.geeksforgeeks.org/wp-content/uploads/7-55.png)
 
 ## Files 📄
 
