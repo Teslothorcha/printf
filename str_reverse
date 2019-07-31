@@ -1,0 +1,25 @@
+#include "holberton.h"
+/**
+ * str_reverse - rev. the order of an array
+ * @a : pointer-parameter
+ * @n : parameter
+ * Return: ntg.
+ */
+int str_reverse(va_list list)
+{
+	char  *a = va_arg(list, char*);
+	int n = _strlen(a);
+	int j = n - 1;
+	int i = 0;
+	int tmp;
+
+	while (i < j)
+	{
+		tmp = a[i];
+		a[i] = a[j];
+		a[j] = tmp;
+		i++;
+		j--;
+	}
+	return(j);
+}
