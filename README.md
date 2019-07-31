@@ -39,6 +39,13 @@ For example on your local machine you run
 git clone https://github.com/Teslothorcha/printf.git
 ```
 
+## Test ⚙️
+For example, with my cloned ```printf``` repository, we are going to run our ```man_page``` which is the project documentation, this file is ```man_3_printf```, to execute it we will do the following; standing inside the previously cloned repository, we run in our console
+
+```man ./[FILE]``` taking into account the structure, for our case it would be ```man ./man_3_printf```
+
+![man_page](https://media.geeksforgeeks.org/wp-content/uploads/7-55.png
+
 ## Files 📄
 
 | File                               | Description                                                                                            |
