@@ -12,10 +12,6 @@ int _printf(const char *format, ...)
 	argument arr[] = {
 		{'c', cha_r},
 		{'s', strin_g},
-		{'d', fun_integer},
-		{'b', print_bin},
-		{'b', print_bin},
-		{'r', str_reverse},
 		{'\0', NULL},
 };
 	int c1, c2, w;
