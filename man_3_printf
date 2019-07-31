@@ -1,41 +1,136 @@
-.TH _PRINTF "01" "July 2019" "Holberton"
+.TH _printf 3 "30 July 2019" "_printf man page"
+
 .SH NAME
-printf \- prints supplied string with certain operators for substitution and formatting
+_printf \- formats and prints arguments to the standard output.
+
 .SH SYNOPSIS
-.B _printf (const char *
-\fIFORMAT\fR , \fIARGUMENT\fR...){}
-.br
-.B _printf ('%
-[\fIOPERATOR\fR]');
-.TP
-NOTE: single quotes used are double quotes in practice
+.B
+#include "holberton.h"
+.LP
+.B _printf
+.B (const char *format, ...);
+
 .SH DESCRIPTION
-Print ARGUMENT(s) according to OPTION within the supplied FORMAT string:
-.TP
-FORMAT is the string to print including OPERATORS.  Interpreted sequences are:
-.TP
-%%: a single %
-.TP
-%c
-ARGUMENT of data type character is printed in its place.
-.TP
-%s
-ARGUMENT of data type string is printed in its place.
-.TP
-%d/%i
-ARGUMENT of data type integer is printed in its place.
-.TP
-%b
-ARGUMENT of data type integer is converted to binary.
+The _printf() function formats and prints arguments to the standard output based on the format string.
+Any number of arguments can follow the format string. These arguments will replace the conversion specifiers in the _printf() function.
+
+.LP
+.B Return Value
+.RS 3
+The _printf() function returns the number of characters printed to the standard output. A null character will not be printed to the screen, and will not be considered in the character count.
+
+.LP
+.RE
+.B Format String
+.RS 3
+The format string of _printf() contains ordinary characters, characters to be printed to the standard output, and conversion specifications.
+
+.LP
+Conversion specifications begins with a % symbol and end with a conversion character. The conversion specification determines the format and conversion of the arguments that follow the format string.
+These arguments are optional, and should only be necessary when a conversion specification is present in the format string.
+.LP
+The following lists the various flags and conversion characters that are available for the _printf() function. If used, they must follow the percent symbol in the order they are listed.
+.LP
+.B Flags
+.LP
+The following flags can be mixed and matched in any order.
+.LP
+.RS 3
+.B '-'
+.RS 3
+Adds left adjustment to the converted argument.
+.LP
+.RE
+.B '+'
+.RS 3
+Adds a sign to a number to be printed.
+.LP
+.RE
+.B 'space'
+.RS 3
+Given that the first printed character is not a sign, a space will be added.
+.LP
+.RE
+.B '0'
+.RS 3
+Used to pad the field width with leading zeros.
+.RE
+.RE
+
+.LP
+.B Conversion Specifiers/Characters
+.LP
+The following characters determine the conversion and format of the arguments that follow the mandatory format string of printf().
+.LP
+.RS 3
+.B %c
+.RS 3
+Accepts an argument type of int. Converts to an unsigned char type and prints a single character to the standard output.
+.LP
+.RE
+.B %s
+.RS 3
+Accepts an argument type of char *. Prints the specified characters from the string until a null character is reached.
+.LP
+.RE
+.B %d, %i
+.RS 3
+Accepts an argument type of int. Prints the signed decimal notation to the standard output.
+.LP
+.RE
+.B %b
+.RS 3
+Accepts an argument type of unsigned int. Prints the binary format of the argument to the standard output.
+.LP
+.RE
+.B %u
+.RS 3
+Accepts an argument type of int. Prints the unsigned decimal notation to the standard output.
+.LP
+.RE
+.B %o
+.RS 3
+Accepts an argument type of int. Prints the unsigned octal notation to the standard output.
+.LP
+.RE
+.B %X, %x
+.RS 3
+Accepts an argument type of int. Prints the unsigned hexadecimal notation to the standard output. 'X' indicates that capital letters will be used (A-F). 'x' indicates that lowercase letters will be used (a-f).
+.LP
+.RE
+.B %S
+.RS 3
+Accepts an argument type of char *. Prints the characters(non-printable and printable) of the string to the standard output. Nonprintable characters will be printed with the ASCII code value in hexadecimal.
+.LP
+.RE
+.B %p
+.RS 3
+Accepts an argument type of void *. Prints the address of a variable.
+.LP
+.RE
+.B %r
+.RS 3
+Accepts an argument type of char *. Prints the characters of a string in reverse.
+.LP
+.RE
+.B %R
+.RS 3
+Accepts an argument type of char *. Prints the characters of a string in rot13.
+.LP
+.RE
+.B %%
+.RS 3
+Accepts no argument. Prints a percent sign.
+.LP
+.RE
+.B %(invalid conversion character)
+.RS 3
+Accepts no argument. In the case that an invalid conversion character is placed after the percentage sign, the percentage sign and character will be printed onto the output screen.
+
+.SH BUGS
+The _printf() function returns the number of characters printed to the output screen. As a result, users must be careful to not overflow the function by inserting an excessively long format string or too many input arguments.
+.LP
+In the event that conversion specifiers are present in the format string, but no arguments are provided, then a possible segmentation error might occur. Because the variable type, va_list, is unable to detect the end of the variable argument list, there are no means of avoiding this issue in the _printf() function.
+
 .SH AUTHOR
-Written by Juan David Marin and Julian David Gaitan
-.SH "REPORTING BUGS"
-Report _printf bugs to https://www.github.com/Teslothorcha
-.br
-Initiate an issue in the repsitory referring to the specific option and describe 
-.pp
-in detail.
-.br
-.SH "SEE ALSO"
-man printf
-.PP
+Juan David Marin and Julian David Gaitan
