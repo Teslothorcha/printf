@@ -23,9 +23,21 @@ A custom made printf function built in C using only the write, malloc, free, va_
 
 The custom printf function is called using \_printf() and will take in a format string.
 
-´´´
+```
 int \_printf(const char \*format, ...);
-´´´
+```
+## Installation 🚀
+
+_Note:_ To use all of the features of `printf`, you'll need
+install `printf` in your local repository.
+
+For installing
+the prinf package, they need to stand where they want to clone the repository below for more details.
+
+For example on your local machine you run 
+```
+git clone https://github.com/Teslothorcha/printf.git
+```
 
 ## Files 📄
 
