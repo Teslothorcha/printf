@@ -1,31 +1,32 @@
 #include "holberton.h"
 /**
- * print_bin - funtion returns binaries
- * @va:parameter
- * Return: cont
+ * p_b - prints number in binary
+ *@list: argument enterede to format printing
+ * Return: amount of integers printed
  */
-
-int print_bin(va_list va)
+int p_b(va_list list)
 {
-	unsigned int num;
-	int  j;
-	int a[100];
-	int cont = 0;
+	int number = va_arg(list, int);
+	int arrb[100];
+	int i = 0, j, c;
+	int counter;
 
-	num = va_arg(va, int);
-	if (num == 0)
+	if (number == 0)
 	{
-		putchar('0');
-		return (1);
+		_putchar('0');
+		return (-1);
 	}
-	while (num > 0)
+	while (number > 0)
 	{
-		a[cont] = num % 2;
-		num /= 2;
-		cont++;
+		arrb[i] = number % 2;
+		number = number / 2;
+		i++;
 	}
-
-	for (j = cont - 1; j >= 0; j--)
-		putchar(a[j] + 48);
-	return (cont);
+	for (j = (i - 1); j >= 0; j--)
+	{
+		c = arrb[j];
+		_putchar(c + '0');
+		counter++;
+	}
+	return (counter);
 }
