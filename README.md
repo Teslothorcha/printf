@@ -19,9 +19,7 @@
 The C library function int printf(const char *format, ...) sends formatted output to stdout.
 A custom made printf function built in C using only the write, malloc, free, va_start, va_copy, va__arg, and va_end non custom functions.
 
-<div align="right">
-  <small><a href="## Authors ✒️">🡡 volver al inicio</a></small>
-</div>
+
 
 ## Description 📖
 
