@@ -46,7 +46,7 @@ int strin_g(va_list list)
 	unsigned int i, len;
 
 	str = va_arg(list, char *);
-	if (str == NULL || ((char *)0))
+	if (str == NULL)
 		str = "(null)";
 	len = _strlen(str);
 	for (i = 0; i < len; i++)
