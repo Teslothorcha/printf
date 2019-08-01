@@ -33,7 +33,7 @@ int \_printf(const char \*format, ...);
 
 | File                               | Description                                                                                            |
 | :--------------------------------- |------------------------------------------------------------------------------------------------------- |
-|[holberton.h](./holberton.h)        | header file with all prototypes, libraries, and struct that used to identify correct function          |
+|[holberton.h](./holberton.h)        | header file with all prototypes, libraries, and struct that used to identify correct function.        |
 |[man_3_printf](./man_3_printf)      | man page for custom printf function                                                                    |
 |[_printf.c](./_printf.c)            | file with main function for calling printf and iterating through format string to print correct output |
 |[conv_fuctions.c](./conv_funtions.c)| function that produces output according to a format
