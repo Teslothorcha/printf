@@ -66,7 +66,7 @@ int \_printf(const char \*format, ...);
 
 * %X : with an integer argument, prints the hexadecimal notation with uppercase letters
 
-* %b : with an integer argument, prints the binary conversion of that integer
+* %b : with an integer argument, prints the binary conversion of that integer.
 
 
 ## Built With 🛠️
