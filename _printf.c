@@ -10,10 +10,17 @@
 int _printf(const char *format, ...)
 {
 	argument arr[] = {
+		{'b', p_b},
 		{'c', cha_r},
 		{'s', strin_g},
 		{'d', p_d},
+		{'u', p_u},
+		{'o', p_o},
 		{'i', p_d},
+		{'x', p_h},
+		{'r', str_reverse},
+		{'X', p_hh},
+		{'R', roott},
 		{'\0', NULL},
 };
 	int c1, c2, w;
@@ -37,22 +44,28 @@ int _printf(const char *format, ...)
 				{
 					w += arr[c2].cv(list);
 					c1++;
-					break; }
-				c2++; }
+					break;
+				}
+				c2++;
+			}
 			if (format[c1] == '%' && format[c1 + 1] == '%')
 			{
 				_putchar('%');
 				c1++;
 				w++;
-				break; }
-			if (format[c1] == '%')
+				break;
+			}
+			if (format[c1] == '%' && format[c1 + 1] == '\0')
 			{
 				_putchar('%');
-			}}
+			}
+		}
 		else
 		{
 			_putchar(format[c1]);
-			w++; }
-		c1++; }
+			w++;
+		}		c1++;
+	}
 	va_end(list);
-	return (w); }
+	return (w);
+}
