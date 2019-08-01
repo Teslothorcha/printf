@@ -87,7 +87,7 @@ For example, with my cloned ```printf``` repository, we are going to run our ```
 
 * %% : will print out just one of the percentage signs
 
-* %r : with a string argument, prints the reversed string
+* %r : with a string argument, prints the reversed string.
 
 * %R : with a string argument, prints the rot13 encoded version of string
 
