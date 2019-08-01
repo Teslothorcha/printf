@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
- * p_d - Entry point
- *@print: pints numbers
- * Return: no return
+ * p_d - Print integers when incoked
+ *@list: argument entered to print
+ * Return: amount of integers printed
  */
-int p_d(va_list print)
+int p_d(va_list list)
 {
-	int n = va_arg(print, int);
+	int n = va_arg(list, int);
 	int num, last = n % 10, digit, exp = 1;
 	int  i = 1;
 
